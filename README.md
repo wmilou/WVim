@@ -10,7 +10,7 @@ dependencys:
 
 # Post install config
 
-    change font on yout emulator-terminal to Regular Meslo
+    change font on yout emulator-terminal to Monospace Regular
 
 
 
