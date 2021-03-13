@@ -1,6 +1,6 @@
 # WVim
 
-    Customized vim configuration, and instalation by Wedsley Fernando Da Silva Milouchine. 
+Customized vim configuration, and instalation by Wedsley Fernando Da Silva Milouchine. 
 
 # Dependencies (WVim) 
 
@@ -8,8 +8,8 @@
 
 # How to install 
 
-    Exec ./install -h to see help, exec ./install -d to see dependencies and ./install -i to install WVim, on end of instalation exec Nvim to install packages.
+Exec ./install -h to see help, exec ./install -d to see dependencies and ./install -i to install WVim, on end of instalation exec Nvim to install packages.
 
 # Post install config
 
-    change font on your emulator-terminal to Monospace Regular
+change font on your emulator-terminal to Monospace Regular
