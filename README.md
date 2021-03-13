@@ -1,16 +1,11 @@
 # WVim
 
     Customized vim configuration, and instalation by Wedsley Fernando Da Silva Milouchine. 
-    
 
 # Nvim (WVim) 
 
-    dependencys: wget, curl, snv, git, xclip (to clipboard in vim)
+    dependencys: wget, curl, snv, git, xclip (to work clipboard in vim)
 
 # Post install config
 
-    change font on yout emulator-terminal to Monospace Regular
-
-
-
-
+    change font on your emulator-terminal to Monospace Regular
