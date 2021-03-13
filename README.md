@@ -2,9 +2,9 @@
 
     Customized vim configuration, and instalation by Wedsley Fernando Da Silva Milouchine. 
 
-# Nvim (WVim) 
+# Dependencies (WVim) 
 
-    dependencys: wget, curl, snv, git, xclip (to work clipboard in vim)
+    dependencies: wget, curl, snv, git, xclip (to work clipboard in vim)
 
 # Post install config
 

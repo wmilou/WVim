@@ -35,15 +35,15 @@ usage: ${0##*/} [flags]
     --install,          -i  Install W Vim
     --version,          -v  Show version
     --help,             -h  Show this is message
-    --dependencys,      -d  Show dependencys 
+    --dependencies,     -d  Show dependencies 
 
 * Wedsley Fernando Da Silva Milouchine  - <https://github.com/WedsleyFernando> - W VIM 1.0.0
 EOF
 }
 
-dependencys_show() {
+dependencies_show() {
 cat <<EOF
-dependencys: ${0##*/} 
+dependencies: ${0##*/} 
     wget, curl, svn (subversion), git, xclip (to clipboard in vim)
 
 * Wedsley Fernando Da Silva Milouchine  - <https://github.com/WedsleyFernando> - W VIM 1.0.0
@@ -109,7 +109,7 @@ while [[ "$1" ]]; do
         "--install"|"-i") _install ;;
         "--help"|"-h") usage ;;
         "--version"|"-v") printf "%s\n" "$version" && exit 0 ;;
-        "--dependencys"|"-d") dependencys_show ;;
+        "--dependencies"|"-d") dependencies_show ;;
         *) echo 'Invalid option.' && usage && exit 1 ;;
     esac
     shift
