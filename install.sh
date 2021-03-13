@@ -41,11 +41,10 @@ usage: ${0##*/} [flags]
 EOF
 }
 
-_start
 dependencys_show() {
 cat <<EOF
 dependencys: ${0##*/} 
-    wget, curl, snv, git, xclip (to clipboard in vim)
+    wget, curl, svn (subversion), git, xclip (to clipboard in vim)
 
 * Wedsley Fernando Da Silva Milouchine  - <https://github.com/WedsleyFernando> - W VIM 1.0.0
 EOF
@@ -86,8 +85,6 @@ _git_svn_packs(){
 
 _cfg(){
     curl -sLf https://spacevim.org/install.sh | bash -s -- --install neovim
-    $(echo mv ~/.SpaceVim.d  ~/.SpaceVim.d_old_old)
-    $(echo mv ~/.SpaceVim  ~/.SpaceVim_old_old)
     $(echo cp -r $CURRENT_DIR/Configs/SpaceVim ~/.SpaceVim)
     $(echo cp -r $CURRENT_DIR/Configs/SpaceVim.d ~/.SpaceVim.d)
 }
