@@ -13,7 +13,7 @@ Clone this repository with this
 
     git clone https://github.com/WedsleyFernando/WVim.git
 
-Inside of WVim
+Inside of WVim directory
 
     Exec ./install -h to see help
 
