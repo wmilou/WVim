@@ -94,7 +94,7 @@ _git_svn_packs(){
 
 _cfg(){
     echo -e "$COLOR [*] Configuring your vim ... $NC"
-    curl -sLf https://spacevim.org/install.sh > bash -s -- --install neovim
+    curl -sLf https://spacevim.org/install.sh | bash -s -- --install neovim
     $(echo cp -r $CURRENT_DIR/Configs/SpaceVim ~/.SpaceVim)
     $(echo cp -r $CURRENT_DIR/Configs/SpaceVim.d ~/.SpaceVim.d)
 }

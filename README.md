@@ -16,6 +16,6 @@ Inside of WVim
 
 On end of instalation exec Nvim to install packages.
 
-#Dev Icons
+# Dev Icons
 
 Change font on your emulator-terminal to Monospace Regular
