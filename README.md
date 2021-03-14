@@ -1,5 +1,6 @@
 # WVim
 
+![Print of WVim](https://github.com/WedsleyFernando/WVim/blob/main/Images/WVim_Neovim.png?raw=true)
 Customized vim configuration, and instalation by Wedsley Fernando Da Silva Milouchine. 
 This vim csutomization is inspired on [SpaceVim]( https://spacevim.org ) and use this extencion on this
 
