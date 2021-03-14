@@ -1,15 +1,21 @@
 # WVim
 
 Customized vim configuration, and instalation by Wedsley Fernando Da Silva Milouchine. 
+This vim csutomization is inspired on [SpaceVim]( https://spacevim.org ) and use this extencion on this
 
 # Dependencies (WVim) 
 
-    dependencies: wget, curl, svn (subversion), git, xclip (to work clipboard in vim)
+    Dependencies: wget, curl, svn (subversion), git, xclip (to work clipboard in vim)
 
 # How to install 
 
-Exec ./install -h to see help, exec ./install -d to see dependencies and ./install -i to install WVim, on end of instalation exec Nvim to install packages.
+Clone this repository with this
+    git clone https://github.com/WedsleyFernando/WVim.git
+Inside of WVim
+    Exec ./install -h to see help
 
-# Post install config
+On end of instalation exec Nvim to install packages.
 
-change font on your emulator-terminal to Monospace Regular
+#Dev Icons
+
+Change font on your emulator-terminal to Monospace Regular

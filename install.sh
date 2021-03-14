@@ -12,19 +12,26 @@ version="${0##*/} version 1.0.0"
 
 CURRENT_DIR=$(pwd)
 
+COLOR='\033[0;32m'
+NC='\033[0;0m'
+
 shopt -s extglob
 
 
 _start(){
+echo -e "$COLOR"
 cat <<EOF
-
-__        __ __     ___           
-\ \      / / \ \   / (_)_ __ ___  
- \ \ /\ / /   \ \ / /| | '_ ' _ \ 
-  \ V  V /     \ V / | | | | | | |
-   \_/\_/       \_/  |_|_| |_| |_|
-
+==============================================================================
+==                                                                          ==
+==                   __        __ __     ___                                ==
+==                   \ \      / / \ \   / (_)_ __ ___                       ==
+==                    \ \ /\ / /   \ \ / /| | '_ ' _ \                      ==
+==                     \ V  V /     \ V / | | | | | | |                     ==
+==                      \_/\_/       \_/  |_|_| |_| |_|                     ==
+==                                                                          ==
+==============================================================================
 EOF
+echo -e "$NC"
 }
 
 usage() {
@@ -71,28 +78,37 @@ _install_latest_nvim(){
         ;;
     esac
 
-    $(wget https://github.com/neovim/neovim/releases/download/nightly/$filename -O - | tar -xz )
+    echo -e "$COLOR [*] Instaling Neovim lastest version ... $NC"
+    $(wget https://github.com/neovim/neovim/releases/download/nightly/$filename -q --show-progress -O - | tar -xz )
     $(echo sudo mv $CURRENT_DIR/$filename2 /opt)
     $(echo sudo ln -s /opt/$filename2/bin/nvim /usr/bin/nvim)
 }
 
 _git_svn_packs(){
+    echo -e "$COLOR [*] Instaling fonts ... $NC"
     [[ ! -d "${HOME}/.local/share/fonts" ]] && mkdir -p "${HOME}/.local/share/fonts"
-    svn export https://github.com/terroo/fonts/trunk/fonts
-    mv fonts ${HOME}/.local/share/fonts/
-    fc-cache -fv
+    svn export https://github.com/terroo/fonts/trunk/fonts 2>&1 
+    mv fonts ${HOME}/.local/share/fonts/ 2>&1
+    fc-cache -fv 1> /dev/null 2>&1
 }
 
 _cfg(){
-    curl -sLf https://spacevim.org/install.sh | bash -s -- --install neovim
+    echo -e "$COLOR [*] Configuring your vim ... $NC"
+    curl -sLf https://spacevim.org/install.sh > bash -s -- --install neovim
     $(echo cp -r $CURRENT_DIR/Configs/SpaceVim ~/.SpaceVim)
     $(echo cp -r $CURRENT_DIR/Configs/SpaceVim.d ~/.SpaceVim.d)
 }
 _ok(){
     clear
+    _start
+    echo -e "$COLOR=============================================================================="
+    echo -e "$COLOR==                        INSTALLATION FINISHED!                            =="
+    echo -e "$COLOR=============================================================================="
+    echo -e "$COLOR=============================================================================="
+    echo -e "$COLOR==      Open you Neovim and it will install the plugins automatically       =="
+    echo -e "$COLOR==============================================================================$NC"
+    
 
-    echo "INSTALLATION FINISHED!"
-    echo "Now open and close your \"nvim\" to install packeges"
 }
 
 _install(){
