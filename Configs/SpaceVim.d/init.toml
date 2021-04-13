@@ -1,8 +1,6 @@
 #=============================================================================
-# basic.toml --- basic configuration example for SpaceVim
-# Copyright (c) 2016-2017 Wang Shidong & Contributors
-# Author: Wang Shidong < wsdjeg at 163.com >
-# URL: https://spacevim.org
+# init.toml
+# Author: Wedsley Fernando Da Silva Milouchine 
 # License: GPLv3
 #=============================================================================
 
@@ -30,25 +28,30 @@
     enable_tabline_filetype_icon = true
     enable_statusline_mode = true
     statusline_unicode_symbols = true
+
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
+
     # Set FileTree to Left
     filetree_direction = "left"
     filemanager = "nerdtree"
 
 # Enable autocomplete layer
 [[layers]]
-name = 'autocomplete'
-auto_completion_return_key_behavior = "complete"
-auto_completion_tab_key_behavior = "cycle"
+  name = "lsp"
 
 [[layers]]
-name = "incsearch"
+  name = 'autocomplete'
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "cycle"
 
 [[layers]]
-name = 'shell'
-default_position = 'bottom'
-default_height = 20
+  name = "incsearch"
+
+[[layers]]
+  name = 'shell'
+  default_position = 'bottom'
+  default_height = 20
 
 [[layers]]
   name = "code#tabline"
@@ -57,6 +60,11 @@ default_height = 20
 [[layers]]
   name = "core#statusline"
   enable = false
+
+
+#===================================================
+# Custom Plugins by Wedsley Fernando
+#===================================================
 
 [[custom_plugins]]
   repo = "rafi/awesome-vim-colorschemes"
@@ -87,11 +95,6 @@ default_height = 20
 [[custom_plugins]]
   repo ="vim-airline/vim-airline-themes"
   name ="theme_airline"
-  merged = false
-
-[[custom_plugins]]
-  repo = "vim-airline/vim-airline"
-  name = "vim_airline"
   merged = false
 
 [[custom_plugins]]
@@ -127,4 +130,24 @@ default_height = 20
 [[custom_plugins]]
   repo = "airblade/vim-gitgutter"
   name = "vim-gitgutter"
+  merged = false
+
+[[custom_plugins]]
+  repo = "will133/vim-dirdiff"
+  name = "vim-dirdiff"
+  merged = false
+
+[[custom_plugins]]
+  repo = "chrisbra/unicode.vim"
+  name = "vim-unicode"
+  merged = false
+
+[[custom_plugins]]
+  repo = "romgrk/barbar.nvim"
+  name = "nvim-barbar"
+  merged = false
+
+[[custom_plugins]]
+  repo = "kyazdani42/nvim-web-devicons"
+  name = "nvim-web-devicons"
   merged = false

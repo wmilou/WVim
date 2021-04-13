@@ -1,11 +1,13 @@
 "=============================================================================
 " init.vim --- Entry file for neovim
-" Copyright (c) 2016-2019 Wang Shidong & Contributors
-" Author: Wang Shidong < wsdjeg at 163.com >
-" URL: https://spacevim.org
+" Author: Wedsley Fernando Da Silva Milouchine 
 " License: GPLv3
 "=============================================================================
 
+"===================================================
+"             Configurações do NERDTree
+"===================================================
+let NERDTreeShowHidden                    = 1
 
 "Configurações do propio spaceVim 
 execute 'source' fnamemodify(expand('<sfile>'), ':h').'/config/main.vim'
@@ -13,10 +15,12 @@ execute 'source' fnamemodify(expand('<sfile>'), ':h').'/config/main.vim'
 "ABREVIAÇÕES
 "Abreviação do meu nome para documentação 
 iabbrev Wedsley Wedsley Fernando Da Silva Milouchine
-" RA da Faculdade para documentçao em atividades
+iabbrev Wdy Wedsley Fernando 
+
+" RA da Faculdade para documentçao em atividades 
 iabbrev RA RA:73183
 
-"COnfigurações do tab
+"Configurações do tab
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 "Deixa syntax mais bonitinha
@@ -25,28 +29,72 @@ syntax on
 " Não deixa as linhas sairem para fora da tela
 set wrap
 
-" Airline
+"
+
+"===================================================
+"                    Airline
+"===================================================
 let g:airline_powerline_fonts              = 1
 let g:airline_symbols                      = {}
+" let g:airline_left_sep                     = '⮀⮁ 🎮'
+" let g:airline_right_sep                     = '⮃'
 let g:airline#extensions#hunks#enabled     = 0
-let g:airline#extensions#tabline#enabled   = 1
+let g:airline#extensions#tabline#enabled   = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme                        = 'dracula'
 let g:airline_powerline_fonts              = 1
- 
-"Copy and Paste
+
+"===================================================
+"                  Copy and Paste
+"===================================================
 noremap <A-c> "+y
-noremap <A-v> "+p   
+noremap <A-v> "+p  
 
 
-"Configurações do NERDTree
-let NERDTreeShowHidden                    = 1
-
-"Configurações do Nvim Customizadas por mim 
+"===================================================
+"     Configurações do Nvim Customizadas por mim 
+"===================================================
 set history=5000
 set undolevels=5000
 
-"Mover linhas inteiras pelo codigo
+"===================================================
+"                   BARBAR CONFIG
+"===================================================
+" Move to previous/next
+nnoremap <silent>    <A-,> :BufferPrevious<CR>
+nnoremap <silent>    <A-.> :BufferNext<CR>
+" Re-order to previous/next
+nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
+nnoremap <silent>    <A->> :BufferMoveNext<CR>
+" Goto buffer in position...
+nnoremap <silent>    <A-1> :BufferGoto 1<CR>
+nnoremap <silent>    <A-2> :BufferGoto 2<CR>
+nnoremap <silent>    <A-3> :BufferGoto 3<CR>
+nnoremap <silent>    <A-4> :BufferGoto 4<CR>
+nnoremap <silent>    <A-5> :BufferGoto 5<CR>
+nnoremap <silent>    <A-6> :BufferGoto 6<CR>
+nnoremap <silent>    <A-7> :BufferGoto 7<CR>
+nnoremap <silent>    <A-8> :BufferGoto 8<CR>
+nnoremap <silent>    <A-9> :BufferLast<CR>
+" Close buffer
+nnoremap <silent>    <A-q> :BufferClose<CR>
+" Wipeout buffer
+"                          :BufferWipeout<CR>
+" Close commands
+"                          :BufferCloseAllButCurrent<CR>
+"                          :BufferCloseBuffersLeft<CR>
+"                          :BufferCloseBuffersRight<CR>
+" Magic buffer-picking mode
+nnoremap <silent> <C-s>    :BufferPick<CR>
+" Sort automatically by...
+nnoremap <silent> <Space>bd :BufferOrderByDirectory<CR>
+nnoremap <silent> <Space>bl :BufferOrderByLanguage<CR>
+"===================================================
+
+
+"===================================================
+"      move lines on code with C-j and C-k
+"===================================================
 function! s:swap_lines(n1, n2)
     let line1 = getline(a:n1)
     let line2 = getline(a:n2)
@@ -76,24 +124,33 @@ endfunction
 
 noremap <silent> <c-k> :call <SID>swap_up()<CR>
 noremap <silent> <c-j> :call <SID>swap_down()<CR>
-" Acabou bloco de mover linhas inteiras
+"===================================================
 
 
-"Close current Buffer
+
+"===================================================
+"              Close current Buffer
+"===================================================
 function! s:close_current_buffer_no_close_vim()
     let current_buffer = bufnr('%')
     bp
     exec "bd" current_buffer
 endfunction
 noremap <silent> <c-q> :call <SID>close_current_buffer_no_close_vim()<CR>
+"===================================================
 
 
-"Bloco do Telescope
+"===================================================
+"                Bloco do Telescope
+"===================================================
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+"=================================================
+"                  LUA CONFIGS
+"=================================================
 
 " Lua Configs Telescope
 lua << EOF
@@ -125,8 +182,7 @@ require('telescope').setup{
         mirror = false,
       },
     },
-    file_sorter =  require'telescope.sorters'.get_fuzzy_file,
-    file_ignore_patterns = {},
+    file_sorter =  require'telescope.sorters'.get_fuzzy_file, file_ignore_patterns = {},
     generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
     shorten_path = true,
     winblend = 0,
@@ -150,7 +206,7 @@ require('telescope').setup{
 EOF
 
 
-" Lua Configs Colorized
+" Lua Configs Colorized hexadecimal
 lua << EOF
 -- Attaches to every FileType mode
 require 'colorizer'.setup()
@@ -190,4 +246,3 @@ require 'colorizer'.setup {
   -- Exclusion Only makes sense if '*' is specified!
 }
 EOF
-
