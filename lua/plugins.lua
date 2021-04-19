@@ -53,6 +53,9 @@ return require('packer').startup(function()
     use { 'rafamadriz/friendly-snippets', opt = true }
     use { 'hrsh7th/nvim-compe', as = 'compe' }
 
+    -- DashBoard Plugin
+    use { 'glepnir/dashboard-nvim' }
+
     -- Lines swap
     use { 'WedsleyFernando/vim-swap-lines' }
 
