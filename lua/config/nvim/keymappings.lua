@@ -19,9 +19,25 @@ utils.map('n', '<A-,>', '<cmd>BufferLineCyclePrev<CR>')               -- Select 
 utils.map('n', '<A-]>', '<cmd>BufferLineMoveNext<CR>')                -- Move buffer to next position in bufferline
 utils.map('n', '<A-[>', '<cmd>BufferLineMovePrev<CR>')                -- Move buffer to previous position in bufferline
 -- other mappings
--- <cmd>BufferLineSortByExtension<CR>
 -- <cmd>BufferLineSortByDirectory<CR>
+-- <cmd>BufferLineSortByExtension<CR>
 --
+
+-- Lsp Mappings
+vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.s_tab_complete()", {expr = true})
+utils.map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+utils.map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
+utils.map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+utils.map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+utils.map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+-- utils.map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+-- utils.map('n', '<C-n>', '<cmd>lua vim.lsp.buf.diagnostic.goto_prev()<CR>')
+-- utils.map('n', '<C-p>', '<cmd>lua vim.lsp.buf.diagnostic.goto_next()<CR>')
+  
+  
 
 -- ==============================================================
 --                       SWAP LINES 

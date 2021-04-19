@@ -32,13 +32,17 @@ local function try_loadstring(s, component, name)
 end
 
 _G.packer_plugins = {
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/auto-pairs"
+  },
   ["awesome-vim-colorschemes"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/awesome-vim-colorschemes"
   },
-  ["completion-nvim"] = {
+  compe = {
     loaded = true,
-    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/completion-nvim"
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/compe"
   },
   dracula = {
     loaded = true,
@@ -76,12 +80,6 @@ _G.packer_plugins = {
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
-  },
-  ["nvim-compe"] = {
-    after_files = { "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_buffer.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_calc.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_emoji.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_luasnip.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_nvim_lsp.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_nvim_lua.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_omni.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_path.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_snippets_nvim.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_spell.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_tags.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_treesitter.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_ultisnips.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_vim_lsc.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_vim_lsp.vim", "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_vsnip.vim" },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

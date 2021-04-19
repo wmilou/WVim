@@ -21,9 +21,12 @@ return require('packer').startup(function()
     use {
         'nvim-telescope/telescope.nvim',
         requires = {{ 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }} }
+
     -- LSP and completion
     use { 'neovim/nvim-lspconfig' }
-    use { 'nvim-lua/completion-nvim' }
+
+    -- Auto pairs plugin
+    use { 'jiangmiao/auto-pairs' }
 
     -- Lua development
     use { 'tjdevries/nlua.nvim' }
@@ -36,19 +39,19 @@ return require('packer').startup(function()
 
     -- To see Colors in terminal 
     use { 'norcalli/nvim-colorizer.lua' }
-
     -- BufferLine to manage Buffers
     use { 'akinsho/nvim-bufferline.lua'}
     -- Galaxyline statusline Styled
+
     use { 'glepnir/galaxyline.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
 
     -- NvimTree 
     use { 'kyazdani42/nvim-tree.lua' }
 
     -- Autocomplete
-    use { 'hrsh7th/nvim-compe', opt = true }
     use { 'hrsh7th/vim-vsnip', opt = true }
     use { 'rafamadriz/friendly-snippets', opt = true }
+    use { 'hrsh7th/nvim-compe', as = 'compe' }
 
     -- Lines swap
     use { 'WedsleyFernando/vim-swap-lines' }
@@ -77,6 +80,3 @@ return require('packer').startup(function()
     -- Require NvimTree Config
     require('config.toggleterm.config')
 end)
-
-
-

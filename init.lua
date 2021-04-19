@@ -21,6 +21,13 @@ require('config.nvim.keymappings')
 -- Import Colors
 require('config.nvim.colorscheme')  -- color scheme
 
--- Setup Lua language server using submodule
--- Using smmneko_lua
--- require('lsp_lua')
+-- =======================================================
+--                    Lsp Configs Import 
+-- =======================================================
+-- For install Languages Server completions and more access 
+-- https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
+--
+-- How to work?
+-- Install language server specified on link and add configuration
+-- line on file /nvim/lua/config/lsp/languages.lua
+require('config.lsp')  -- lsp config, comment this line if you dont use any language server
