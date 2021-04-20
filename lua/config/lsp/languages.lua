@@ -1,5 +1,8 @@
+-- Add on this file yours instaled lsp servers
+
 require'lspconfig'.pyright.setup{} -- Python language server require 
 require'lspconfig'.bashls.setup{}  -- Bash language server require
+
 
 -- HTML Server
 --Enable (broadcasting) snippet capability for completion

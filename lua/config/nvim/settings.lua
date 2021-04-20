@@ -4,9 +4,6 @@ local indent = 4
 -- Map Leader to Space
 vim.g.mapleader = ' '
 
--- Dashboard config
-vim.g.dashboard_default_executive ='telescope'
-
 -- Syntax enable
 vim.cmd 'syntax enable'
 

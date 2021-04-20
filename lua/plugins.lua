@@ -52,7 +52,6 @@ return require('packer').startup(function()
 
     -- NvimTree 
     use { 'kyazdani42/nvim-tree.lua' }
-
     -- Autocomplete
     use { 'hrsh7th/vim-vsnip' }
     use { 'rafamadriz/friendly-snippets' }
@@ -69,6 +68,10 @@ return require('packer').startup(function()
 
     -- Ident mark
     use { 'Yggdroot/indentLine' }
+
+    
+
+
 
     -- Terminal Open with Lua
     use { 'akinsho/nvim-toggleterm.lua' }
@@ -87,4 +90,7 @@ return require('packer').startup(function()
 
     -- Require NvimTree Config
     require('config.toggleterm.config')
+
+    -- Require Dashboard Config
+    require('config.dashboard.config')
 end)

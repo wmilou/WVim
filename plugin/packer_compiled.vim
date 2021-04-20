@@ -140,10 +140,6 @@ _G.packer_plugins = {
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-vsnip"
-  },
-  ["vim-vsnip-integ"] = {
-    loaded = true,
-    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
   }
 }
 
