@@ -44,14 +44,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/compe"
   },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
+  },
   dracula = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/dracula"
   },
   ["friendly-snippets"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/wedsley/.local/share/nvim/site/pack/packer/opt/friendly-snippets"
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/friendly-snippets"
   },
   ["galaxyline.nvim"] = {
     loaded = true,
@@ -122,6 +125,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
+  ["vim-jsbeautify"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-jsbeautify"
+  },
   ["vim-monokai"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-monokai"
@@ -131,9 +138,12 @@ _G.packer_plugins = {
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-swap-lines"
   },
   ["vim-vsnip"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/wedsley/.local/share/nvim/site/pack/packer/opt/vim-vsnip"
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+  },
+  ["vim-vsnip-integ"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
   }
 }
 

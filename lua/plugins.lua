@@ -22,6 +22,9 @@ return require('packer').startup(function()
         'nvim-telescope/telescope.nvim',
         requires = {{ 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }} }
 
+    -- HTML AutoFormat
+    use { 'maksimr/vim-jsbeautify' }
+
     -- LSP and completion
     use { 'neovim/nvim-lspconfig' }
 
@@ -31,6 +34,7 @@ return require('packer').startup(function()
     -- Lua development
     use { 'tjdevries/nlua.nvim' }
 
+
     -- Vim dispatch
     use { 'tpope/vim-dispatch' }
 
@@ -39,18 +43,19 @@ return require('packer').startup(function()
 
     -- To see Colors in terminal 
     use { 'norcalli/nvim-colorizer.lua' }
+
     -- BufferLine to manage Buffers
     use { 'akinsho/nvim-bufferline.lua'}
-    -- Galaxyline statusline Styled
 
+    -- Galaxyline statusline Styled
     use { 'glepnir/galaxyline.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
 
     -- NvimTree 
     use { 'kyazdani42/nvim-tree.lua' }
 
     -- Autocomplete
-    use { 'hrsh7th/vim-vsnip', opt = true }
-    use { 'rafamadriz/friendly-snippets', opt = true }
+    use { 'hrsh7th/vim-vsnip' }
+    use { 'rafamadriz/friendly-snippets' }
     use { 'hrsh7th/nvim-compe', as = 'compe' }
 
     -- DashBoard Plugin

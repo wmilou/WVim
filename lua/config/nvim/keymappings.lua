@@ -24,10 +24,10 @@ utils.map('n', '<A-[>', '<cmd>BufferLineMovePrev<CR>')                -- Move bu
 --
 
 -- Lsp Mappings
-vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.s_tab_complete()", {expr = true})
+utils.map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+utils.map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+utils.map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+utils.map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 utils.map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
 utils.map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
 utils.map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
@@ -37,6 +37,13 @@ utils.map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 -- utils.map('n', '<C-n>', '<cmd>lua vim.lsp.buf.diagnostic.goto_prev()<CR>')
 -- utils.map('n', '<C-p>', '<cmd>lua vim.lsp.buf.diagnostic.goto_next()<CR>')
   
+-- Snip Mappings and AutoComplete
+utils.map("i", "<CR>", "compe#confirm('<CR>')", {expr = true})
+utils.map("n", "s", "<Plug>(vsnip-select-text)")
+utils.map("x", "s", "<Plug>(vsnip-select-text)")
+utils.map("n", "S", "<Plug>(vsnip-cut-text)")
+utils.map("x", "S", "<Plug>(vsnip-cut-text)")
+
   
 
 -- ==============================================================

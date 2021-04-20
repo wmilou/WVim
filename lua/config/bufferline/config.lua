@@ -13,7 +13,7 @@
     max_name_length = 18,
     max_prefix_length = 15, -- prefix used when a buffer is deduplicated
     tab_size = 18,
-    separator_style = "slant", -- "slant" | "thick" | "thin" | { 'any', 'any' },
+    separator_style = "thick", -- "slant" | "thick" | "thin" | { 'any', 'any' },
     enforce_regular_tabs = true,  -- false | true,
     always_show_bufferline = true -- true | false,
 	}
