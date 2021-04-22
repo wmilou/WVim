@@ -44,6 +44,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/compe"
   },
+  ["dart-vim-plugin"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/dart-vim-plugin"
+  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
@@ -140,6 +144,10 @@ _G.packer_plugins = {
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+  },
+  ["wal.vim"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/wal.vim"
   }
 }
 

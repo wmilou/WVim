@@ -14,6 +14,7 @@ return require('packer').startup(function()
     use { 'sainnhe/gruvbox-material' }
     use { 'dracula/vim', as = 'dracula' }
     use { 'rafi/awesome-vim-colorschemes' } use { 'crusoexia/vim-monokai' }
+    use { 'dylanaraps/wal.vim' }
     -- ======================================= 
     --                 Tools
     -- =======================================
@@ -56,6 +57,9 @@ return require('packer').startup(function()
     use { 'hrsh7th/vim-vsnip' }
     use { 'rafamadriz/friendly-snippets' }
     use { 'hrsh7th/nvim-compe', as = 'compe' }
+
+    -- Dart colored syntax 
+    use { 'dart-lang/dart-vim-plugin' }
 
     -- DashBoard Plugin
     use { 'glepnir/dashboard-nvim' }
