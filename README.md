@@ -10,8 +10,8 @@ Copy and paste this line on your terminal emulator
 	note: To install it, is required neovim version ( >= 0.5 )
 
 --- 
-### Download and Install all packeges
-	To load packeges, open Nvim and exec 
+### Download and Install all packages
+	To load packages, open Nvim and exec 
 Inside nvim exec command
 > :PackerInstall
  
@@ -19,9 +19,9 @@ Inside nvim exec command
 
 ## How to Add Keymapping
 
-For add keymapping edit the file located in lua/config/nvim/kaymappings.lua
+To add keymapping edit the file located in lua/config/nvim/kaymappings.lua
 
-Emample of Mapping: 
+Example of Mapping: 
 ``` lua
 -- ('{mode}', '{keys}', '{mappings}')
 utils.map('i', 'jk', '<Esc>') -- jk to escape
