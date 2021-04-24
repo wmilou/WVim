@@ -17,6 +17,10 @@ Inside nvim exec command
  
 --------
 
+## Keymappings
+
+All keymappings you can find inside file lua/config/nvim/keymappings.lua
+
 ## How to Add Keymapping
 
 For add keymapping edit the file located in lua/config/nvim/kaymappings.lua
