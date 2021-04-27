@@ -67,3 +67,9 @@ end
 
 
 require('config.lsp.languages')
+
+
+
+-- init saga lsp
+local saga = require 'lspsaga'
+saga.init_lsp_saga()

@@ -72,6 +72,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/indentLine"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/material.nvim"
+  },
   nerdcommenter = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/nerdcommenter"

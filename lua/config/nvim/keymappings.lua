@@ -13,6 +13,9 @@ utils.map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')          -- To Sera
 -- Mappings of NvimTree
 utils.map('n', '<F3>', '<cmd>NvimTreeToggle<cr>')                     -- Open and Close TreeFiles
 
+-- Mappings of material colorscheme
+vim.api.nvim_set_keymap('n', '<C-t>', [[<Cmd>lua require('material.functions').toggle_style()<CR>]], { noremap = true, silent = true })
+
 -- Mappings of bufferline
 utils.map('n', '<A-.>', '<cmd>BufferLineCycleNext<CR>')               -- Select Next Buffer
 utils.map('n', '<A-,>', '<cmd>BufferLineCyclePrev<CR>')               -- Select Previous Buffer
@@ -24,15 +27,31 @@ utils.map('n', '<A-[>', '<cmd>BufferLineMovePrev<CR>')                -- Move bu
 --
 
 -- Lsp Mappings
-utils.map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-utils.map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+-- LspMapping saga
+utils.map("n", "gh", "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>")  -- go to definition and reference
+utils.map("n", "gs", "<cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>")  -- Signature Help
+utils.map("n", "gr", "<cmd>lua require('lspsaga.rename').rename()<CR>")  --  Rename
+utils.map("n", "gd", "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>")  --  preview definition
+utils.map("n", "ca", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>")  -- code actions NERDCommenterAlignBoth
+utils.map("n", "K", "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>")  -- hover doc 
+utils.map("n", "<C-f>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>")  -- scroll down
+utils.map("n", "<C-b>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")  -- scroll up
+
+utils.map("n", "<A-d>", "<cmd>lua require('lspsaga.floaterm').open_float_terminal()<CR>")  -- Open Floating Terminal
+utils.map("t", "<A-d>", "<cmd>lua require('lspsaga.floaterm').close_float_terminal()<CR>")  -- Open Floating Terminal
+
+
+
+-- Completeme
+utils.map("i", "<Tab>", "v:lua.tab_complete()", {expr = true}) -- tab to complete
+utils.map("s", "<Tab>", "v:lua.tab_complete()", {expr = true}) -- tab to complete
 utils.map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 utils.map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-utils.map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
-utils.map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
-utils.map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
-utils.map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
-utils.map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+-- utils.map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+-- utils.map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
+-- utils.map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+-- utils.map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+-- utils.map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 -- utils.map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
 -- utils.map('n', '<C-n>', '<cmd>lua vim.lsp.buf.diagnostic.goto_prev()<CR>')
 -- utils.map('n', '<C-p>', '<cmd>lua vim.lsp.buf.diagnostic.goto_next()<CR>')

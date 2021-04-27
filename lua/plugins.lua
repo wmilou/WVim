@@ -15,6 +15,7 @@ return require('packer').startup(function()
     use { 'dracula/vim', as = 'dracula' }
     use { 'rafi/awesome-vim-colorschemes' } use { 'crusoexia/vim-monokai' }
     use { 'dylanaraps/wal.vim' }
+    use { 'marko-cerovac/material.nvim' }
     -- ======================================= 
     --                 Tools
     -- =======================================
@@ -28,6 +29,7 @@ return require('packer').startup(function()
 
     -- LSP and completion
     use { 'neovim/nvim-lspconfig' }
+    use { 'glepnir/lspsaga.nvim' }
 
     -- Auto pairs plugin
     use { 'jiangmiao/auto-pairs' }
@@ -73,12 +75,9 @@ return require('packer').startup(function()
     -- Ident mark
     use { 'Yggdroot/indentLine' }
 
-    
-
-
-
     -- Terminal Open with Lua
     use { 'akinsho/nvim-toggleterm.lua' }
+
 
     -- Require Bufferline config
     require('config.bufferline.config')
