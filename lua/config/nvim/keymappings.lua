@@ -25,7 +25,8 @@ utils.map('n', '<A-.>', '<cmd>BufferLineCycleNext<CR>')               -- Select 
 utils.map('n', '<A-,>', '<cmd>BufferLineCyclePrev<CR>')               -- Select Previous Buffer
 utils.map('n', '<A-]>', '<cmd>BufferLineMoveNext<CR>')                -- Move buffer to next position in bufferline
 utils.map('n', '<A-[>', '<cmd>BufferLineMovePrev<CR>')                -- Move buffer to previous position in bufferline
-utils.map('n', '<A-q>', '<cmd>q<CR>')                                 -- Close Buffer 
+utils.map('n', '<A-q>', '<cmd>bdelete<CR>')                                 -- Close Buffer 
+utils.map('n', '<C-A-q>', '<cmd>qa!<CR>')                                 -- Close all buffers
 -- other mappings
 -- <cmd>BufferLineSortByDirectory<CR>
 -- <cmd>BufferLineSortByExtension<CR>
