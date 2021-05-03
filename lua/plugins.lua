@@ -37,7 +37,6 @@ return require('packer').startup(function()
     -- Lua development
     use { 'tjdevries/nlua.nvim' }
 
-
     -- Vim dispatch
     use { 'tpope/vim-dispatch' }
 
@@ -59,6 +58,10 @@ return require('packer').startup(function()
     use { 'hrsh7th/vim-vsnip' }
     use { 'rafamadriz/friendly-snippets' }
     use { 'hrsh7th/nvim-compe', as = 'compe' }
+
+    -- otimize syntax highlight
+    use { 'nvim-treesitter/nvim-treesitter' }
+    use { 'p00f/nvim-ts-rainbow' }
 
     -- Dart colored syntax 
     use { 'dart-lang/dart-vim-plugin' }
@@ -96,4 +99,8 @@ return require('packer').startup(function()
 
     -- Require Dashboard Config
     require('config.dashboard.config')
+
+    -- Require Treesitter Config
+    require("config.treesitter.config")
+
 end)

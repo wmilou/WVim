@@ -108,6 +108,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
@@ -144,6 +148,10 @@ _G.packer_plugins = {
   ["vim-monokai"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-monokai"
+  },
+  ["vim-rainbow"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-rainbow"
   },
   ["vim-swap-lines"] = {
     loaded = true,
