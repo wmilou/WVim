@@ -2,7 +2,6 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
-    
     -- =======================================
     -- Packer can manage itself as an optional plugin
     -- =======================================
@@ -52,6 +51,9 @@ return require('packer').startup(function()
     -- Galaxyline statusline Styled
     use { 'glepnir/galaxyline.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
 
+    -- Interactive Scrollbar
+    use { 'dstein64/nvim-scrollview' }
+
     -- NvimTree 
     use { 'kyazdani42/nvim-tree.lua' }
     -- Autocomplete
@@ -62,6 +64,17 @@ return require('packer').startup(function()
     -- otimize syntax highlight
     use { 'nvim-treesitter/nvim-treesitter' }
     use { 'p00f/nvim-ts-rainbow' }
+    use { 'romgrk/nvim-treesitter-context' }
+
+    -- Todos and otthers highlight
+    use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+        require("todo-comments").setup {
+        }
+    end
+    }
 
     -- Dart colored syntax 
     use { 'dart-lang/dart-vim-plugin' }
@@ -76,12 +89,15 @@ return require('packer').startup(function()
     use { 'preservim/nerdcommenter' }
 
     -- Ident mark
-    use { 'Yggdroot/indentLine' }
+    use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' } 
 
     -- Terminal Open with Lua
     use { 'akinsho/nvim-toggleterm.lua' }
 
 
+    -- =======================================
+    --         Call Modules Configs 
+    -- =======================================
     -- Require Bufferline config
     require('config.bufferline.config')
 
@@ -102,5 +118,8 @@ return require('packer').startup(function()
 
     -- Require Treesitter Config
     require("config.treesitter.config")
+
+    -- Require Indent-blankline Config
+    require("config.indent_blankline.config")
 
 end)
