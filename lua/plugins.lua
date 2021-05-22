@@ -82,6 +82,9 @@ return require('packer').startup(function()
     -- DashBoard Plugin
     use { 'glepnir/dashboard-nvim' }
 
+    -- Sessions manager 
+    use { 'rmagatti/auto-session' }
+
     -- Lines swap
     use { 'WedsleyFernando/vim-swap-lines' }
 
@@ -121,5 +124,8 @@ return require('packer').startup(function()
 
     -- Require Indent-blankline Config
     require("config.indent_blankline.config")
+
+    -- Require auto-session Config
+    require("config.auto_session.config")
 
 end)
