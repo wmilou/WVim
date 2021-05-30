@@ -61,6 +61,9 @@ return require('packer').startup(function()
     use { 'rafamadriz/friendly-snippets' }
     use { 'hrsh7th/nvim-compe', as = 'compe' }
 
+    -- Icons on LSP
+    use { 'onsails/lspkind-nvim' }
+
     -- otimize syntax highlight
     use { 'nvim-treesitter/nvim-treesitter' }
     use { 'p00f/nvim-ts-rainbow' }
@@ -127,5 +130,8 @@ return require('packer').startup(function()
 
     -- Require auto-session Config
     require("config.auto_session.config")
+
+    -- Require compe icons Config
+    require("config.icons_compe.config")
 
 end)
