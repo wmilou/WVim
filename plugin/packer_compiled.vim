@@ -62,8 +62,9 @@ time("try_loadstring definition", true)
 local function try_loadstring(s, component, name)
   local success, result = pcall(loadstring(s))
   if not success then
-    print('Error running ' .. component .. ' for ' .. name)
-    error(result)
+    vim.schedule(function()
+      vim.api.nvim_notify('packer.nvim: Error running ' .. component .. ' for ' .. name .. ': ' .. result, vim.log.levels.ERROR, {})
+    end)
   end
   return result
 end
@@ -75,10 +76,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/auto-pairs"
   },
-  ["auto-session"] = {
-    loaded = true,
-    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/auto-session"
-  },
   ["awesome-vim-colorschemes"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/awesome-vim-colorschemes"
@@ -86,10 +83,6 @@ _G.packer_plugins = {
   compe = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/compe"
-  },
-  ["dart-vim-plugin"] = {
-    loaded = true,
-    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/dart-vim-plugin"
   },
   ["dashboard-nvim"] = {
     loaded = true,
@@ -114,6 +107,10 @@ _G.packer_plugins = {
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
+  },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
@@ -200,6 +197,10 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-gitgutter"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-gitgutter"
   },
   ["vim-jsbeautify"] = {
     loaded = true,

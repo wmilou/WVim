@@ -3,7 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
     -- =======================================
-    -- Packer can manage itself as an optional plugin
+    --                Packer 
     -- =======================================
     use { 'wbthomason/packer.nvim', opt = true}
 
@@ -15,13 +15,15 @@ return require('packer').startup(function()
     use { 'rafi/awesome-vim-colorschemes' } use { 'crusoexia/vim-monokai' }
     use { 'dylanaraps/wal.vim' }
     use { 'marko-cerovac/material.nvim' }
+
     -- ======================================= 
     --                 Tools
     -- =======================================
     -- Fuzzy finder
     use {
         'nvim-telescope/telescope.nvim',
-        requires = {{ 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }} }
+        requires = {{ 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }} 
+    }
 
     -- HTML AutoFormat
     use { 'maksimr/vim-jsbeautify' }
@@ -33,14 +35,17 @@ return require('packer').startup(function()
     -- Auto pairs plugin
     use { 'jiangmiao/auto-pairs' }
 
-    -- Lua development
-    use { 'tjdevries/nlua.nvim' }
+    -- Vim Multi Selections 
+    use { 'mg979/vim-visual-multi' }
 
     -- Vim dispatch
     use { 'tpope/vim-dispatch' }
 
     -- Fugitive for Git
     use { 'tpope/vim-fugitive' }
+
+    -- GitGutter to show Modification
+    use { 'airblade/vim-gitgutter' }
 
     -- To see Colors in terminal 
     use { 'norcalli/nvim-colorizer.lua' }
@@ -56,6 +61,7 @@ return require('packer').startup(function()
 
     -- NvimTree 
     use { 'kyazdani42/nvim-tree.lua' }
+
     -- Autocomplete
     use { 'hrsh7th/vim-vsnip' }
     use { 'rafamadriz/friendly-snippets' }
@@ -64,32 +70,29 @@ return require('packer').startup(function()
     -- Icons on LSP
     use { 'onsails/lspkind-nvim' }
 
-    -- otimize syntax highlight
+    -- Otimize syntax highlight
     use { 'nvim-treesitter/nvim-treesitter' }
     use { 'p00f/nvim-ts-rainbow' }
     use { 'romgrk/nvim-treesitter-context' }
 
     -- Todos and otthers highlight
     use {
-    "folke/todo-comments.nvim",
-    requires = "nvim-lua/plenary.nvim",
-    config = function()
-        require("todo-comments").setup {
-        }
-    end
+        "folke/todo-comments.nvim",
+        requires = "nvim-lua/plenary.nvim",
+        config = function()
+            require("todo-comments").setup {
+            }
+        end
     }
 
-    -- Dart colored syntax 
-    use { 'dart-lang/dart-vim-plugin' }
+    -- Lua development
+    use { 'tjdevries/nlua.nvim' }
 
     -- DashBoard Plugin
     use { 'glepnir/dashboard-nvim' }
 
-    -- Sessions manager 
-    use { 'rmagatti/auto-session' }
-
     -- Lines swap
-    use { 'WedsleyFernando/vim-swap-lines' }
+    use { 'wmilou/vim-swap-lines' }
 
     -- Commenter plugin
     use { 'preservim/nerdcommenter' }
