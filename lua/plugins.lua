@@ -19,14 +19,11 @@ return require('packer').startup(function()
     -- ======================================= 
     --                 Tools
     -- =======================================
-    -- Fuzzy finder
+    -- Fuzzy finder Telescope
     use {
         'nvim-telescope/telescope.nvim',
         requires = {{ 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }} 
     }
-
-    -- HTML AutoFormat
-    use { 'maksimr/vim-jsbeautify' }
 
     -- LSP and completion
     use { 'neovim/nvim-lspconfig' }
@@ -35,20 +32,14 @@ return require('packer').startup(function()
     -- Auto pairs plugin
     use { 'jiangmiao/auto-pairs' }
 
-    -- Vim Multi Selections 
-    use { 'mg979/vim-visual-multi' }
+    -- Vim GitGutter to see Modifications with git window
+    use { 'airblade/vim-gitgutter' }
 
-    -- Vim dispatch
+    -- Vim dispatch to auto compile programs with :make
     use { 'tpope/vim-dispatch' }
-
-    -- Fugitive for Git
-    use { 'tpope/vim-fugitive' }
 
     -- GitGutter to show Modification
     use { 'airblade/vim-gitgutter' }
-
-    -- To see Colors in terminal 
-    use { 'norcalli/nvim-colorizer.lua' }
 
     -- BufferLine to manage Buffers
     use { 'akinsho/nvim-bufferline.lua'}
@@ -67,6 +58,7 @@ return require('packer').startup(function()
     use { 'rafamadriz/friendly-snippets' }
     use { 'hrsh7th/nvim-compe', as = 'compe' }
 
+
     -- Icons on LSP
     use { 'onsails/lspkind-nvim' }
 
@@ -84,9 +76,6 @@ return require('packer').startup(function()
             }
         end
     }
-
-    -- Lua development
-    use { 'tjdevries/nlua.nvim' }
 
     -- DashBoard Plugin
     use { 'glepnir/dashboard-nvim' }
@@ -119,7 +108,7 @@ return require('packer').startup(function()
     -- Require NvimTree Config
     require('config.nvimtree.config')
 
-    -- Require NvimTree Config
+    -- Require ToggleTerm Config
     require('config.toggleterm.config')
 
     -- Require Dashboard Config
@@ -130,9 +119,6 @@ return require('packer').startup(function()
 
     -- Require Indent-blankline Config
     require("config.indent_blankline.config")
-
-    -- Require auto-session Config
-    require("config.auto_session.config")
 
     -- Require compe icons Config
     require("config.icons_compe.config")

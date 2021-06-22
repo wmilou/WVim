@@ -46,7 +46,7 @@ local function save_profiles(threshold)
   _G._packer.profile_output = results
 end
 
-time("Luarocks path setup", true)
+time([[Luarocks path setup]], true)
 local package_path_str = "/home/wedsley/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/wedsley/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/wedsley/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/wedsley/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
 local install_cpath_pattern = "/home/wedsley/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
@@ -57,8 +57,8 @@ if not string.find(package.cpath, install_cpath_pattern, 1, true) then
   package.cpath = package.cpath .. ';' .. install_cpath_pattern
 end
 
-time("Luarocks path setup", false)
-time("try_loadstring definition", true)
+time([[Luarocks path setup]], false)
+time([[try_loadstring definition]], true)
 local function try_loadstring(s, component, name)
   local success, result = pcall(loadstring(s))
   if not success then
@@ -69,8 +69,8 @@ local function try_loadstring(s, component, name)
   return result
 end
 
-time("try_loadstring definition", false)
-time("Defining packer_plugins", true)
+time([[try_loadstring definition]], false)
+time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["auto-pairs"] = {
     loaded = true,
@@ -124,17 +124,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/nerdcommenter"
   },
-  ["nlua.nvim"] = {
-    loaded = true,
-    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/nlua.nvim"
-  },
   ["nvim-bufferline.lua"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
-  },
-  ["nvim-colorizer.lua"] = {
-    loaded = true,
-    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -194,17 +186,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-dispatch"
   },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-fugitive"
-  },
   ["vim-gitgutter"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-gitgutter"
-  },
-  ["vim-jsbeautify"] = {
-    loaded = true,
-    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-jsbeautify"
   },
   ["vim-monokai"] = {
     loaded = true,
@@ -224,11 +208,11 @@ _G.packer_plugins = {
   }
 }
 
-time("Defining packer_plugins", false)
+time([[Defining packer_plugins]], false)
 -- Config for: todo-comments.nvim
-time("Config for todo-comments.nvim", true)
+time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
-time("Config for todo-comments.nvim", false)
+time([[Config for todo-comments.nvim]], false)
 if should_profile then save_profiles() end
 
 END
