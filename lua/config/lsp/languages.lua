@@ -21,3 +21,7 @@ require'lspconfig'.dartls.setup{
 
 -- Add Language server to Java
 require'lspconfig'.java_language_server.setup{}
+
+
+-- add c server language
+require'lspconfig'.ccls.setup{}

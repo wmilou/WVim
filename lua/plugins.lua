@@ -35,11 +35,11 @@ return require('packer').startup(function()
     -- Vim GitGutter to see Modifications with git window
     use { 'airblade/vim-gitgutter' }
 
+    -- Vim Fugitive to see real modification with git
+    use { 'tpope/vim-fugitive' }
+
     -- Vim dispatch to auto compile programs with :make
     use { 'tpope/vim-dispatch' }
-
-    -- GitGutter to show Modification
-    use { 'airblade/vim-gitgutter' }
 
     -- BufferLine to manage Buffers
     use { 'akinsho/nvim-bufferline.lua'}
