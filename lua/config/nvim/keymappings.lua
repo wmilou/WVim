@@ -1,12 +1,13 @@
 local utils = require('utils')
 
 -- Mappings of Nvim
-utils.map('n','<C-l>', '<cmd>noh<CR>') -- Clear highlishts
-utils.map('i', 'jk', '<Esc>')           -- jk to escape
-utils.map('n', '<C-Left>', '<cmd>vertical resize +5<CR>')           -- resize buffer 
+utils.map('n', '<C-Left>', '<cmd>vertical resize +5<CR>')            -- resize buffer 
 utils.map('n', '<C-Right>', '<cmd>vertical resize -5<CR>')           -- resize buffer 
-utils.map('n', '<C-Up>', '<cmd>resize -5<CR>')           -- resize buffer 
-utils.map('n', '<C-Down>', '<cmd>resize +5<CR>')           -- resize buffer 
+utils.map('n', '<C-Up>', '<cmd>resize -5<CR>')                       -- resize buffer 
+utils.map('n', '<C-Down>', '<cmd>resize +5<CR>')                     -- resize buffer 
+
+utils.map('n', '<leader>ss', '<cmd>SessionSave<CR>')
+utils.map('n', '<leader>sl', '<cmd>SessionLoad<CR>')
 
 -- Mappings of Telescope
 utils.map('n', '<leader>ff', '<cmd>Telescope find_files<cr>')         -- To Find Files 
@@ -25,8 +26,8 @@ utils.map('n', '<A-.>', '<cmd>BufferLineCycleNext<CR>')               -- Select 
 utils.map('n', '<A-,>', '<cmd>BufferLineCyclePrev<CR>')               -- Select Previous Buffer
 utils.map('n', '<A-]>', '<cmd>BufferLineMoveNext<CR>')                -- Move buffer to next position in bufferline
 utils.map('n', '<A-[>', '<cmd>BufferLineMovePrev<CR>')                -- Move buffer to previous position in bufferline
-utils.map('n', '<A-q>', '<cmd>bdelete<CR>')                                 -- Close Buffer 
-utils.map('n', '<C-A-q>', '<cmd>qa!<CR>')                                 -- Close all buffers
+utils.map('n', '<A-q>', '<cmd>bdelete<CR>')                           -- Close Buffer 
+utils.map('n', '<C-A-q>', '<cmd>qa!<CR>')                             -- Close all buffers
 -- other mappings
 -- <cmd>BufferLineSortByDirectory<CR>
 -- <cmd>BufferLineSortByExtension<CR>

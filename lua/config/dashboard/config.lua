@@ -30,7 +30,7 @@ vim.g.dashboard_custom_section = {
     a = {description = {'  New Empty File     '}, command = ':enew'},
     b = {description = {'  Find File          '}, command = 'Telescope find_files'},
     c = {description = {'  Recently Used Files'}, command = 'Telescope oldfiles'},
-    d = {description = {'  Load Last Session  '}, command = 'lua load_last_session()'},
+    d = {description = {'  Load Last Session  '}, command = 'SessionLoad'},
     e = {description = {'  Find Word          '}, command = 'Telescope live_grep'},
     f = {description = {'  Marks              '}, command = 'Telescope marks'},
     g = {description = {'------ CONFIGS ------ '}, command = ' '},
@@ -41,16 +41,4 @@ vim.g.dashboard_custom_section = {
     l = {description = {'  Plugins            '}, command = ':e ~/.config/nvim/lua/plugins.lua'}
 }
 
--- file_browser = {description = {' File Browser'}, command = 'Telescope find_files'},
-
--- vim.g.dashboard_custom_shortcut = {
---     a = 'f',
---     find_word = 'SPC f a',
---     last_session = 'SPC s l',
---     new_file = 'SPC c n',
---     book_marks = 'SPC f b'
--- }
--- find_history = 'SPC f h',
-
--- vim.g.dashboard_session_directory = '~/.cache/nvim/session'
 vim.g.dashboard_custom_footer = { 'https://github.com/wmilou/WVim' }
