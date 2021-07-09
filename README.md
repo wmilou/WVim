@@ -12,7 +12,7 @@
 ### Easy navigation
 ![easy-navigation](https://github.com/WedsleyFernando/WVim/blob/master/images/easy-navigation.gif?raw=true)
 ### Terminal integration
-![terminal-integration](https://github.com/WedsleyFernando/WVim/blob/master/images/terminal-integration.gif?raw=true)
+![terminal-integration](https://github.com/WedsleyFernando/WVim/blob/master/images/terminal-integration-new.gif?raw=true)
 
 ---------------
 
