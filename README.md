@@ -1,6 +1,22 @@
 # WVIM 
-### WVIM Dashboard 
 ![dashboard](https://github.com/WedsleyFernando/WVim/blob/master/images/dashboard_new.png?raw=true)
+
+---------------
+
+# What are the possibilities with WVIM?
+
+### LSP (language server protocol)
+![python-auto-import](https://github.com/WedsleyFernando/WVim/blob/master/images/lsp-python-function.gif?raw=true)
+### Snips
+![gif-snip-html5](https://github.com/WedsleyFernando/WVim/blob/master/images/snip-html5.gif?raw=true)
+### Easy navigation
+![easy-navigation](https://github.com/WedsleyFernando/WVim/blob/master/images/easy-navigation.gif?raw=true)
+### Terminal integration
+![terminal-integration](https://github.com/WedsleyFernando/WVim/blob/master/images/terminal-integration.gif?raw=true)
+
+---------------
+
+# Getting Started
 
 ## How to Install
 ---
@@ -9,9 +25,11 @@ Install it with one Line
     bash <(curl -s https://raw.githubusercontent.com/wmilou/WVim/master/install_script/install.sh)
 
 --- 
+
 ### Download and Install all packages
 To load packages, open Nvim and exec 
 > Inside nvim exec command
+
     :PackerInstall
  
 ---
@@ -84,18 +102,6 @@ require('config.bufferline.config')
 
 To add new lsp see the documentation of [lsp-nvim](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md) and edit the file located on lua/config/lsp/languages.lua
 
----------------
-
-# What are the possibilities with WVIM?
-
-### LSP (language server protocol)
-![python-auto-import](https://github.com/WedsleyFernando/WVim/blob/master/images/python-auto-import.gif?raw=true)
-### Snips
-![gif-snip-html5](https://github.com/WedsleyFernando/WVim/blob/master/images/gif-snip-html5.gif?raw=true)
-### Easy navigation
-![easy-navigation](https://github.com/WedsleyFernando/WVim/blob/master/images/easy-navigation.gif?raw=true)
-### Terminal integration
-![terminal-integration](https://github.com/WedsleyFernando/WVim/blob/master/images/integration-with-terminal.gif?raw=true)
 
 ----------
 Good Luck    <3
