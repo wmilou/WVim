@@ -80,6 +80,9 @@ return require('packer').startup(function()
     -- DashBoard Plugin
     use { 'glepnir/dashboard-nvim' }
 
+    -- Use to record keys
+    use { 'liuchengxu/vim-which-key' }
+
     -- Lines swap
     use { 'wmilou/vim-swap-lines' }
 
