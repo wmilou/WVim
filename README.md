@@ -4,18 +4,17 @@
 
 ## How to Install
 ---
-Copy and paste this line on your terminal emulator
-> git clone https://github.com/WedsleyFernando/WVim.git ~/.config/nvim
+Install it with one Line 
 
-	note: To install it, is required neovim version ( >= 0.5 )
+    bash <(curl -s https://raw.githubusercontent.com/wmilou/WVim/master/install_script/install.sh)
 
 --- 
 ### Download and Install all packages
-	To load packages, open Nvim and exec 
-Inside nvim exec command
-> :PackerInstall
+To load packages, open Nvim and exec 
+> Inside nvim exec command
+    :PackerInstall
  
---------
+---
 
 ## Keymappings
 
