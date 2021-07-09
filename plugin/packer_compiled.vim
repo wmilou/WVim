@@ -206,6 +206,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   },
+  ["vim-which-key"] = {
+    loaded = true,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/vim-which-key"
+  },
   ["wal.vim"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/wal.vim"
