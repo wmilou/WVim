@@ -1,6 +1,6 @@
 # WVIM 
 ### WVIM Dashboard 
-![dashboard](https://github.com/WedsleyFernando/WVim/blob/master/images/dashboard.png?raw=true)
+![dashboard](https://github.com/WedsleyFernando/WVim/blob/master/images/dashboard_new.png?raw=true)
 
 ## How to Install
 ---
