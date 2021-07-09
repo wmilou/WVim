@@ -132,6 +132,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
+  ["nvim-lspinstall"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/wedsley/.local/share/nvim/site/pack/packer/opt/nvim-lspinstall"
+  },
   ["nvim-scrollview"] = {
     loaded = true,
     path = "/home/wedsley/.local/share/nvim/site/pack/packer/start/nvim-scrollview"

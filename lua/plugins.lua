@@ -8,11 +8,17 @@ return require('packer').startup(function()
     use { 'wbthomason/packer.nvim', opt = true}
 
     -- =======================================
+    --             LSP Manager 
+    -- =======================================
+    use {'kabouzeid/nvim-lspinstall'}
+
+    -- =======================================
     --             Color schemes
     -- =======================================
     use { 'sainnhe/gruvbox-material' }
     use { 'dracula/vim', as = 'dracula' }
-    use { 'rafi/awesome-vim-colorschemes' } use { 'crusoexia/vim-monokai' }
+    use { 'rafi/awesome-vim-colorschemes' } 
+    use { 'crusoexia/vim-monokai' }
     use { 'dylanaraps/wal.vim' }
     use { 'marko-cerovac/material.nvim' }
 
@@ -126,4 +132,6 @@ return require('packer').startup(function()
     -- Require compe icons Config
     require("config.icons_compe.config")
 
+    -- Require lsp install Config
+    require("config.lsp_install.config")
 end)
