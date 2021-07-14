@@ -93,7 +93,7 @@ return require('packer').startup(function()
     use { 'preservim/nerdcommenter' }
 
     -- Ident mark
-    use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' } 
+    use { 'lukas-reineke/indent-blankline.nvim', branch = 'master' } 
 
     -- Terminal Open with Lua
     use { 'akinsho/nvim-toggleterm.lua' }
