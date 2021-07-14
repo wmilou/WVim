@@ -65,21 +65,21 @@ install_neovim_latest_version(){
 
     # Update function
     update_neovim() {
-    printf "${RED}Updating Neovim Nightly...${NC}\n"
-    HTTPS_URL="https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage"
-    CURL_CMD="curl -L -w http_code=%{http_code}"
-    CURL_OUTPUT=`${CURL_CMD} ${HTTPS_URL} -o /tmp/nvim`
-    HTTP_CODE=$(echo "${CURL_OUTPUT}" | sed -e 's/.*\http_code=//')
-    ERROR_MESSAGE=$(echo "${CURL_OUTPUT}" | sed -e 's/http_code.*//')
+        printf "${RED}Updating Neovim Nightly...${NC}\n"
+        HTTPS_URL="https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage"
+        CURL_CMD="curl -L -w http_code=%{http_code}"
+        CURL_OUTPUT=`${CURL_CMD} ${HTTPS_URL} -o /tmp/nvim`
+        HTTP_CODE=$(echo "${CURL_OUTPUT}" | sed -e 's/.*\http_code=//')
+        ERROR_MESSAGE=$(echo "${CURL_OUTPUT}" | sed -e 's/http_code.*//')
 
-    if [[ ${HTTP_CODE} == 200 ]]; then
-        chmod +x /tmp/nvim;
-        sudo cp /tmp/nvim /usr/local/bin;
-        sudo mv /tmp/nvim /usr/bin;
-        printf "${GREEN}Neovim Nightly has been updated successfully!${NC}\n"
-    else
-        printf "${RED}Neovim Nightly has NOT been updated! ERROR: ${ERROR_MESSAGE}${NC}\n"
-    fi
+        if [[ ${HTTP_CODE} == 200 ]]; then
+            chmod +x /tmp/nvim;
+            sudo cp /tmp/nvim /usr/local/bin;
+            sudo mv /tmp/nvim /usr/bin;
+            printf "${GREEN}Neovim Nightly has been updated successfully!${NC}\n"
+        else
+            printf "${RED}Neovim Nightly has NOT been updated! ERROR: ${ERROR_MESSAGE}${NC}\n"
+        fi
     }
 
     rm /tmp/nvim28dce75c-4317-4006-a103-8069d573e2b2
