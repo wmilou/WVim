@@ -65,6 +65,14 @@ _G.s_tab_complete = function()
   end
 end
 
+-- To Remove Inline Diagnostics
+-- i use trouble to see errors
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        virtual_text = false
+    }
+)
+
 
 require('config.lsp.languages')
 

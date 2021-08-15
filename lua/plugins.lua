@@ -12,6 +12,23 @@ return require('packer').startup(function()
     -- =======================================
     use {'kabouzeid/nvim-lspinstall'}
 
+    -- LSP and completion
+    use { 'neovim/nvim-lspconfig' }
+    use { 'glepnir/lspsaga.nvim' }
+
+    -- To show errors  
+    use {
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+            }
+        end
+    }
+
     -- =======================================
     --             Color schemes
     -- =======================================
@@ -28,21 +45,11 @@ return require('packer').startup(function()
         requires = {{ 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }} 
     }
 
-    -- LSP and completion
-    use { 'neovim/nvim-lspconfig' }
-    use { 'glepnir/lspsaga.nvim' }
-
     -- Auto pairs plugin
     use { 'jiangmiao/auto-pairs' }
 
     -- Vim GitGutter to see Modifications with git window
     use { 'airblade/vim-gitgutter' }
-
-    -- Vim Fugitive to see real modification with git
-    use { 'tpope/vim-fugitive' }
-
-    -- Vim dispatch to auto compile programs with :make
-    use { 'tpope/vim-dispatch' }
 
     -- BufferLine to manage Buffers
     use { 'akinsho/nvim-bufferline.lua'}
@@ -83,9 +90,6 @@ return require('packer').startup(function()
     -- DashBoard Plugin
     use { 'glepnir/dashboard-nvim' }
 
-    -- Use to record keys
-    use { 'liuchengxu/vim-which-key' }
-
     -- Lines swap
     use { 'wmilou/vim-swap-lines' }
 
@@ -94,9 +98,6 @@ return require('packer').startup(function()
 
     -- Ident mark
     use { 'lukas-reineke/indent-blankline.nvim', branch = 'master' } 
-
-    -- Terminal Open with Lua
-    use { 'akinsho/nvim-toggleterm.lua' }
 
 
     -- =======================================
@@ -113,9 +114,6 @@ return require('packer').startup(function()
 
     -- Require NvimTree Config
     require('config.nvimtree.config')
-
-    -- Require ToggleTerm Config
-    require('config.toggleterm.config')
 
     -- Require Dashboard Config
     require('config.dashboard.config')
