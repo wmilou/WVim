@@ -4,6 +4,9 @@ local indent = 4
 -- Map Leader to Space
 vim.g.mapleader = ' '
 
+-- Non resize on close buffer
+vim.cmd('set noequalalways')
+
 -- Syntax enable
 vim.cmd 'syntax enable'
 
